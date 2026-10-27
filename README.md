@@ -45,3 +45,63 @@ Frontend Web UI: http://localhost:5173
 Backend REST API & Swagger Docs: http://localhost:8000/docs
 
 PostgreSQL Database: localhost:5432
+
+Direcrtory Structure
+
+healthcare-project/
+├── healthcare-backend/
+│   ├── app/
+│   │   ├── api/
+│   │   │   └── v1/
+│   │   │       ├── endpoints/
+│   │   │       │   ├── auth.py
+│   │   │       │   ├── patients.py
+│   │   │       │   └── audit.py
+│   │   │       └── router.py
+│   │   ├── core/
+│   │   │   ├── config.py
+│   │   │   ├── database.py
+│   │   │   └── security.py
+│   │   ├── models/
+│   │   │   ├── user.py
+│   │   │   ├── patient.py
+│   │   │   └── audit_log.py
+│   │   ├── schemas/
+│   │   │   ├── user.py
+│   │   │   ├── patient.py
+│   │   │   └── audit_log.py
+│   │   ├── services/
+│   │   │   └── audit_service.py
+│   │   └── main.py
+│   ├── migrations/
+│   ├── tests/
+│   ├── .env.example
+│   ├── .gitignore
+│   ├── Dockerfile
+│   ├── alembic.ini
+│   ├── requirements.txt
+│   └── README.md
+├── healthcare-frontend/
+│   ├── public/
+│   ├── src/
+│   │   ├── components/
+│   │   │   ├── ProtectedRoute.jsx
+│   │   │   └── Navbar.jsx
+│   │   ├── pages/
+│   │   │   ├── Login.jsx
+│   │   │   ├── Dashboard.jsx
+│   │   │   ├── PatientList.jsx
+│   │   │   ├── PatientDetail.jsx
+│   │   │   └── AuditLogs.jsx
+│   │   ├── services/
+│   │   │   └── api.js
+│   │   ├── App.jsx
+│   │   ├── main.jsx
+│   │   └── index.css
+│   ├── .env.example
+│   ├── .gitignore
+│   ├── Dockerfile
+│   ├── package.json
+│   ├── vite.config.js
+│   └── README.md
+└── docker-compose.yml
